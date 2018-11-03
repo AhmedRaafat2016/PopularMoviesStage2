@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Ahmed Popular Movies</string>
+    <string name="poster_image">Poster Image</string>
+    <string name="no_connection_icon">No Connection Icon</string>
+    <string name="no_connection">Cannot connect to Internet. Please check your connection!</string>
+    <string name="no_api_key">Please enter your Api Key in the TODO section to use this app.</string>
+
+
+    <!-- Label for order-by highest rated option [CHAR LIMIT=20] -->
+    <string name="movie_poster">movie_poster</string>
+    <string name="release_date">Release Date:</string>
+    <string name="rating">Rating</string>
+    <string name="retry">Retry</string>
+
+    <!-- Sort By Menu Strings -->
+    <string name="sort_by">Sort By</string>
+    <string name="most_popular">Most Popular</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="favorites">Favorites</string>
+    <string name="delete_favorites">Delete All Favorites</string>
+    <string name="trailer">Trailer</string>
+    <string name="no_trailers_found">No Movie Trailers Found</string>
+    <string name="trailer_parse_error">Error Getting Trailers</string>
+    <string name="no_reviews_found">No Reviews Found</string>
+    <string name="error_parsing_reviews">Error Getting Reviews</string>
+
+
+</resources>

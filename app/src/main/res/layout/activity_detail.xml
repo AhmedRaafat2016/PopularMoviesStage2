@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".activities.DetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/movie_backdrop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:contentDescription="@string/movie_poster"
+            tools:layout_height="300dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_favorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/movie_backdrop"
+            android:layout_alignBottom="@id/movie_backdrop"
+            android:src="@drawable/ic_star_empty" />
+
+
+        <RelativeLayout
+            android:id="@+id/data_wrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movie_backdrop"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:text="Title" />
+
+            <TextView
+                android:id="@+id/user_rating_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movie_title"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="8dp"
+                android:text="@string/rating"
+                android:textColor="#FFF"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/user_rating_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movie_title"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/user_rating_text"
+                android:background="@drawable/rating_background"
+                android:paddingStart="2dp"
+                android:paddingEnd="5dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                tools:text="0.0" />
+
+            <TextView
+                android:id="@+id/release_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_rating_text"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="8dp"
+                android:text="@string/release_date"
+                android:textColor="#FFF" />
+
+            <TextView
+                android:id="@+id/release_date_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_rating_text"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/release_date_text"
+                android:textColor="#FFF"
+                tools:text="1/1/2018" />
+
+
+            <TextView
+                android:id="@+id/synopsis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/release_date_data"
+                android:layout_marginTop="16dp"
+                android:textColor="#FFF"
+                tools:text="SAMPLE TEXT HERE FOR OVERVIEW" />
+
+            <TextView
+                android:id="@+id/trailers_found"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/synopsis"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:textColor="#FFF"
+                android:textSize="30sp"
+                tools:text="FOUND 5 Trailers" />
+
+            <!-- Display Trailers Horizontally -->
+            <RelativeLayout
+                android:id="@+id/trailer_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trailers_found"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimary">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/trailer_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fadeScrollbars="false"
+                    android:orientation="horizontal"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:scrollbars="horizontal" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/reviews_found"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trailer_container"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:textColor="#FFF"
+                android:textSize="30sp"
+                tools:text="FOUND 5 Reviews" />
+
+            <!-- Display Reviews -->
+            <RelativeLayout
+                android:id="@+id/review_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reviews_found"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/reviews_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fadeScrollbars="false"
+                    android:orientation="vertical" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
